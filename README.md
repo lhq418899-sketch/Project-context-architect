@@ -1,5 +1,7 @@
 # Project Context Architect（项目上下文架构师）
 
+**中文** | [English](README.en.md)
+
 > 维护一个项目**最小的权威上下文**：让任何全新会话无需继承聊天历史、也无需通读整个仓库，就能安全接管项目。
 > Build and maintain a project's smallest authoritative context: handoff docs, authority refactor, and fresh-session readiness checks.
 

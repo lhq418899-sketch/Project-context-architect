@@ -44,6 +44,7 @@ REQUIRED_FILES = [
     "scripts/README.md",
     # 发布配套
     "README.md",
+    "README.en.md",
     "LICENSE",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
@@ -62,6 +63,7 @@ KEY_PHRASES = [
     ("README.md", "中英混合、中文为主"),
     ("README.md", "[MIT](LICENSE)"),
     ("CHANGELOG.md", "## [0.1.0]"),
+    ("README.en.md", "## Three modes"),
 ]
 
 LINK_RE = re.compile(r"\]\(([^)#]+?)\)")
@@ -86,6 +88,7 @@ def check_links() -> list[str]:
         ROOT / "fixtures" / "README.md",
         ROOT / "PLUGIN.md",
         ROOT / "README.md",
+        ROOT / "README.en.md",
         ROOT / "CONTRIBUTING.md",
     ]
     for md in files:
