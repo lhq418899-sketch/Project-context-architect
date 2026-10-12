@@ -58,8 +58,11 @@ Please install the project-context-architect skill (project minimum-authority co
 3. If your platform supports plugin marketplaces (e.g. Claude Code), you may instead use:
    claude plugin marketplace add lhq418899-sketch/Project-context-architect
    claude plugin install project-context-architect@project-context-architect-marketplace
-4. Verify: SKILL.md exists with complete frontmatter; if Python 3 is available, run python scripts/lint_skill.py and python scripts/check_fixture.py — both should pass.
-5. Tell me where it was installed and the verification result.
+4. If you are an OpenAI Codex / ChatGPT user, install via the official skill-installer or copy to your skills dir:
+   /use skill-installer "Install the project-context-architect skill from https://github.com/lhq418899-sketch/Project-context-architect"
+   (or copy the whole directory to ~/.codex/skills/)
+5. Verify: SKILL.md exists with complete frontmatter; if Python 3 is available, run python scripts/lint_skill.py and python scripts/check_fixture.py — both should pass.
+6. Tell me where it was installed and the verification result.
 ```
 
 Other distribution channels (official directory / self-hosted marketplace / plugin install): see [PLUGIN.md](PLUGIN.md).

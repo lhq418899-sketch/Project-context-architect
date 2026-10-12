@@ -63,8 +63,11 @@ AI 代理在长项目中最常见的问题是**上下文碎片化**：事实散�
 3. 若你的平台支持插件市场（如 Claude Code），也可改用：
    claude plugin marketplace add lhq418899-sketch/Project-context-architect
    claude plugin install project-context-architect@project-context-architect-marketplace
-4. 验证：SKILL.md 存在且 frontmatter 完整；若环境有 Python 3，运行 python scripts/lint_skill.py 与 python scripts/check_fixture.py，两项都应通过。
-5. 完成后告诉我安装位置和验证结果。
+4. 若你是 OpenAI Codex / ChatGPT 用户，用官方 skill-installer 或复制到 skills 目录：
+   /use skill-installer "Install the project-context-architect skill from https://github.com/lhq418899-sketch/Project-context-architect"
+   （或把整个目录复制到 ~/.codex/skills/）
+5. 验证：SKILL.md 存在且 frontmatter 完整；若环境有 Python 3，运行 python scripts/lint_skill.py 与 python scripts/check_fixture.py，两项都应通过。
+6. 完成后告诉我安装位置和验证结果。
 ```
 
 其他分发方式（官方目录 / 自建 marketplace / 插件安装）见 [PLUGIN.md](PLUGIN.md)。

@@ -64,6 +64,9 @@ KEY_PHRASES = [
     ("README.md", "[MIT](LICENSE)"),
     ("CHANGELOG.md", "## [0.1.0]"),
     ("README.en.md", "## Three modes"),
+    ("PLUGIN.md", "Codex 用户接入"),
+    ("README.md", "OpenAI Codex"),
+    ("README.en.md", "OpenAI Codex"),
 ]
 
 LINK_RE = re.compile(r"\]\(([^)#]+?)\)")
