@@ -93,6 +93,7 @@ def check_links() -> list[str]:
     ]
     for md in files:
         text = md.read_text(encoding="utf-8")
+        text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)  # HTML comments are not document links
         base = md.parent
         exempt = EXEMPT.get(md.relative_to(ROOT).as_posix(), set())
         for m in LINK_RE.finditer(text):
