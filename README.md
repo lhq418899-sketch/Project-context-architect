@@ -5,7 +5,9 @@
 > 维护一个项目**最小的权威上下文**：让任何全新会话无需继承聊天历史、也无需通读整个仓库，就能安全接管项目。
 > Build and maintain a project's smallest authoritative context: handoff docs, authority refactor, and fresh-session readiness checks.
 
-<!-- 仓库公开后在此添加徽章：CI 状态、license、stars（示例：[![CI](https://github.com/lhq418899-sketch/Project-context-architect/actions/workflows/ci.yml/badge.svg)]） -->
+[![CI](https://github.com/lhq418899-sketch/Project-context-architect/actions/workflows/ci.yml/badge.svg)](https://github.com/lhq418899-sketch/Project-context-architect/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/lhq418899-sketch/Project-context-architect)](https://github.com/lhq418899-sketch/Project-context-architect)
 
 ## 这是什么
 
