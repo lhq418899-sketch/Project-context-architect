@@ -1,0 +1,26 @@
+{
+  "name": "project-context-architect-marketplace",
+  "display_name": "Project Context Architect",
+  "description": "最小权威上下文治理：handoff 文档、权威重构、交接就绪检查。",
+  "plugins": [
+    {
+      "name": "project-context-architect",
+      "description": "Establish and maintain a project's smallest authoritative context.",
+      "author": {
+        "name": "lhq418899-sketch"
+      },
+      "category": "development",
+      "source": {
+        "source": "git",
+        "url": "https://github.com/lhq418899-sketch/Project-context-architect.git",
+        "path": ".",
+        "ref": "main"
+      },
+      "strict": false,
+      "skills": [
+        "."
+      ],
+      "homepage": "https://github.com/lhq418899-sketch/Project-context-architect"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# 统一 LF 行尾，保证跨平台一致性（本 skill 全部文件为 LF）
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
