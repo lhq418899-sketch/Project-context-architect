@@ -29,15 +29,41 @@ AI 代理在长项目中最常见的问题是**上下文碎片化**：事实散�
 
 ## 快速开始
 
-### 本地安装（当前推荐）
+### 安装（当前推荐）
 
-把本目录放入你的 agent skill 目录（如 Claude Code / Codex 的 skills 或 plugins 目录），然后在项目里使用：
+**安装语义**：整个 `project-context-architect/` 目录就是一个完整的 skill 单元——`SKILL.md` 是入口，`references/`、`examples/`、`fixtures/`、`scripts/` 是它的资源子目录。安装 = 把**整个目录**复制进 agent 的 skills 根目录（目录名保持 `project-context-architect`），**不是**把内部文件拆散平铺。目录内容分层如下：
+
+| 分层 | 内容 | 运行时是否必需 |
+|---|---|---|
+| 运行时核心 | `SKILL.md`、`references/`、`examples/` | 必需 |
+| 演练与回归 | `fixtures/`、`scripts/`（纯 stdlib，无依赖） | 可选 |
+| 仓库发布层 | README.md、LICENSE、CHANGELOG.md、CONTRIBUTING.md、.github/、.gitignore、marketplace.json、PLUGIN.md、.claude-plugin/、agents/ | 不参与运行，可跳过 |
+
+安装完成后，在项目里使用：
 
 - 新项目：让 agent 执行 **BOOTSTRAP**
 - 混乱的既有项目：**REFACTOR**
 - 交接前：**CHECK**
 
-接入分发（官方目录 / 自建 marketplace / 本地插件）见 [PLUGIN.md](PLUGIN.md)。仓库公开后支持 `claude plugin install project-context-architect@...` 一键安装。
+#### 一键安装提示词（复制发给任意 agent）
+
+把下面整段复制给你的 agent（Claude Code / Codex / 其他支持 skills 的助手），即可自动完成安装与验证：
+
+```text
+请帮我安装 project-context-architect 这个 skill（项目最小权威上下文治理）。
+
+1. 获取源码（二选一）：
+   - 仓库：git clone https://github.com/lhq418899-sketch/Project-context-architect.git
+   - 本地：使用我机器上的这个目录：<在此填写源目录路径>
+2. 安装：把整个目录（含 SKILL.md 及 references/、examples/、fixtures/、scripts/ 子目录）作为一个完整 skill 单元，复制到你的 skill 根目录下，目录名保持 project-context-architect；不要拆散内部文件，也不要混入其他位置。
+3. 若你的平台支持插件市场（如 Claude Code），也可改用：
+   claude plugin marketplace add lhq418899-sketch/Project-context-architect
+   claude plugin install project-context-architect@project-context-architect-marketplace
+4. 验证：SKILL.md 存在且 frontmatter 完整；若环境有 Python 3，运行 python scripts/lint_skill.py 与 python scripts/check_fixture.py，两项都应通过。
+5. 完成后告诉我安装位置和验证结果。
+```
+
+其他分发方式（官方目录 / 自建 marketplace / 插件安装）见 [PLUGIN.md](PLUGIN.md)。
 
 ### 概念与执行细则
 
